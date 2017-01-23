@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Newest added films</h3>
+{% if newest_films %}
+<ul>
+    {% for film in newest_films %}
+    <li>
+        <a href='/films/{{film.film_id}}'><b>{{film.title}}</b></a>
+    </li>
+    {% endfor %}
+</ul>
+    {% else %}
+    <p>there are no films</p>
+    {% endif %}
+
+</body>
+</html>
